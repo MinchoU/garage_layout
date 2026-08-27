@@ -1,0 +1,504 @@
+{
+  "objects": [
+    {
+      "asset": "proc:room_shell",
+      "params": {
+        "size_x": 4.0,
+        "size_y": 4.0,
+        "height": 2.6,
+        "wall_t": 0.1,
+        "n_walls": 0
+      },
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:pegboard_wall",
+      "params": {
+        "length": 4.0,
+        "height": 2.6,
+        "thickness": 0.018,
+        "pitch": 0.075,
+        "hole_d": 0.022,
+        "margin": 0.055,
+        "panel_w": 1.0,
+        "panel_h": 1.2,
+        "real_holes": 0
+      },
+      "position": [
+        0.0,
+        -2.009,
+        0.0
+      ],
+      "wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:pegboard_wall",
+      "params": {
+        "length": 4.0,
+        "height": 2.6,
+        "thickness": 0.018,
+        "pitch": 0.075,
+        "hole_d": 0.022,
+        "margin": 0.055,
+        "panel_w": 1.0,
+        "panel_h": 1.2,
+        "real_holes": 0
+      },
+      "position": [
+        -2.009,
+        0.0,
+        0.0
+      ],
+      "wxyz": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865475
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:wall_with_door",
+      "params": {
+        "length": 4.0,
+        "height": 2.6,
+        "thickness": 0.1,
+        "door_w": 0.9,
+        "door_h": 2.05,
+        "door_x": 0.0,
+        "open_deg": 38,
+        "hinge_right": 0,
+        "leaf_t": 0.04,
+        "pegboard": 1,
+        "pitch": 0.075,
+        "hole_d": 0.022
+      },
+      "position": [
+        2.05,
+        0.0,
+        0.0
+      ],
+      "wxyz": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865475
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:pegboard_ceiling",
+      "params": {
+        "size_x": 4.0,
+        "size_y": 4.0,
+        "thickness": 0.06,
+        "pitch": 0.075,
+        "hole_d": 0.022,
+        "margin": 0.055,
+        "panel_w": 1.0,
+        "panel_h": 1.0
+      },
+      "position": [
+        0.0,
+        0.0,
+        2.6
+      ],
+      "wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:ceiling_light",
+      "params": {
+        "plate_w": 0.3,
+        "plate_d": 0.13,
+        "plate_t": 0.022,
+        "spacing": 0.15,
+        "socket_h": 0.055,
+        "bulb_d": 0.06,
+        "lit": 1
+      },
+      "position": [
+        1.24,
+        -1.14,
+        2.6
+      ],
+      "wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:wall_cabinet",
+      "params": {
+        "width": 0.9,
+        "height": 0.55,
+        "depth": 0.3,
+        "n_doors": 2,
+        "open_deg": 0.0,
+        "shelves": 1,
+        "panel_t": 0.016
+      },
+      "position": [
+        -1.2,
+        -2.0,
+        1.95
+      ],
+      "wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:drill",
+      "params": {
+        "size": 1.0,
+        "bit_len": 0.09,
+        "prong_gap": 0.1,
+        "hook": 1
+      },
+      "position": [
+        0.75,
+        -2.0,
+        1.5
+      ],
+      "wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:step_ladder",
+      "params": {
+        "n_steps": 3,
+        "rise": 0.26,
+        "width": 0.4,
+        "spread_deg": 14.0,
+        "tread_d": 0.115,
+        "rail_w": 0.05,
+        "rail_t": 0.028,
+        "top_tray": 1
+      },
+      "position": [
+        1.205019126151251,
+        -1.55,
+        -1.0108223340206024e-32
+      ],
+      "wxyz": [
+        1.0,
+        -2.7369110631344083e-48,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.57,
+        1.57,
+        1.57
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:rack",
+      "params": {
+        "width": 1.0,
+        "depth": 0.54,
+        "height": 1.8,
+        "n_shelves": 4,
+        "post": 0.045,
+        "shelf_t": 0.022,
+        "braces": 1
+      },
+      "position": [
+        -1.35,
+        1.7,
+        0.0
+      ],
+      "wxyz": [
+        6.123233995736766e-17,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:crate",
+      "params": {
+        "size_x": 0.6,
+        "size_y": 0.4,
+        "size_z": 0.35,
+        "slatted": 1
+      },
+      "position": [
+        -1.33,
+        1.7,
+        0.6836666666666666
+      ],
+      "wxyz": [
+        6.123233995736766e-17,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:chair",
+      "params": {
+        "seat_w": 0.42,
+        "seat_d": 0.42,
+        "seat_h": 0.45,
+        "back_h": 0.9,
+        "leg": 0.042,
+        "n_slats": 3
+      },
+      "position": [
+        0.55,
+        0.35,
+        0.0
+      ],
+      "wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:stairs_4step",
+      "params": {
+        "n_steps": 4,
+        "width": 0.76,
+        "tread": 0.32,
+        "riser": 0.2,
+        "tube_t": 0.03,
+        "deck_th": 0.028,
+        "n_slats": 6,
+        "rail_h": 0.92,
+        "rail_r": 0.019,
+        "handrails": 1
+      },
+      "position": [
+        -1.2,
+        -1.15,
+        0.0
+      ],
+      "wxyz": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        -0.7071067811865475
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:table",
+      "params": {
+        "length": 1.4,
+        "depth": 0.7,
+        "height": 0.75,
+        "leg": 0.06
+      },
+      "position": [
+        0.55,
+        1.1,
+        0.0
+      ],
+      "wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:ycb_potted_meat_can",
+      "params": {
+        "scale": 1.0
+      },
+      "position": [
+        0.25,
+        1.0,
+        0.75
+      ],
+      "wxyz": [
+        0.984807753012208,
+        0.0,
+        0.0,
+        0.17364817766693033
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:ycb_mug",
+      "params": {
+        "scale": 1.0
+      },
+      "position": [
+        0.58,
+        1.22,
+        0.75
+      ],
+      "wxyz": [
+        0.9537169507482269,
+        0.0,
+        0.0,
+        -0.3007057995042731
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:ycb_banana",
+      "params": {
+        "scale": 1.0
+      },
+      "position": [
+        0.86,
+        0.95,
+        0.75
+      ],
+      "wxyz": [
+        0.8660254037844387,
+        0.0,
+        0.0,
+        0.49999999999999994
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    },
+    {
+      "asset": "proc:ycb_foam_brick",
+      "params": {
+        "scale": 1.0
+      },
+      "position": [
+        1.06,
+        1.26,
+        0.75
+      ],
+      "wxyz": [
+        0.9961946980917455,
+        0.0,
+        0.0,
+        0.08715574274765817
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true
+    }
+  ]
+}

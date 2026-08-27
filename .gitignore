@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+scene.glb
+scene_demo.glb
