@@ -34,12 +34,26 @@ python editor.py --scene my_room.json     # reload a saved layout
 python build_assets.py                    # every asset -> assets_out/*.glb
 ```
 
-On the Yonsei AI cluster the editor registers itself into `~/.viser_ports` on
-startup, so the laptop-side `autoforward.py` opens the tunnel and
-`http://localhost:8877` works with no manual `ssh -L`. The port is the registry's
-primary key, so it is hard-coded rather than defaulted to 8080 — and what gets
-registered is `server.get_port()`, because viser increments past a busy port
-without saying so.
+The editor registers itself into `~/.viser_ports/active/` on startup. The port is
+the registry's primary key, so it is hard-coded rather than defaulted to 8080 —
+and what gets registered is `server.get_port()`, because viser increments past a
+busy port without saying so.
+
+**Which registry, though.** There are two `node01`s. This one (172.20.1.1, 8x
+L40S, its own Slurm) is not the Yonsei AI cluster's node01 (10.1.1.16), and the
+two do not share `/home`. The laptop-side `autoforward.py` polls
+`ssh ai python3 ~/.viser_ports/_read.py`, which lands on **yonsei-ai-login3** — so
+a server registered here is never seen, no matter how correct the entry is.
+
+Reaching the editor from a laptop is therefore one of:
+
+```bash
+ssh -L 8877:localhost:8877 cmw9903@165.132.144.104   # this box has a public IP
+```
+
+or run it on the AI cluster instead, where the existing forwarder already works
+(8877 is free there — it is not among the ~46 ports the `temp_scripts/viser_*.py`
+defaults claim).
 
 ## Adding an asset
 
