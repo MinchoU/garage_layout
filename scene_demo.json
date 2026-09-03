@@ -557,66 +557,18 @@
    "visible": true
   },
   {
-   "asset": "proc:screw",
+   "asset": "proc:tote",
    "params": {
-    "size": 1.0,
-    "length": 0.02,
-    "shaft_d": 0.004
+    "width": 0.3,
+    "depth": 0.22,
+    "height": 0.09,
+    "taper": 0.018,
+    "wall_t": 0.004
    },
    "position": [
-    -1.8209,
-    0.115,
-    0.903
-   ],
-   "wxyz": [
-    1.0,
-    0.0,
-    0.0,
-    0.0
-   ],
-   "scale": [
-    1.0,
-    1.0,
-    1.0
-   ],
-   "visible": true
-  },
-  {
-   "asset": "proc:screw",
-   "params": {
-    "size": 1.0,
-    "length": 0.02,
-    "shaft_d": 0.004
-   },
-   "position": [
-    -1.7989,
-    0.121,
-    0.903
-   ],
-   "wxyz": [
-    1.0,
-    0.0,
-    0.0,
-    0.0
-   ],
-   "scale": [
-    1.0,
-    1.0,
-    1.0
-   ],
-   "visible": true
-  },
-  {
-   "asset": "proc:screw",
-   "params": {
-    "size": 1.0,
-    "length": 0.02,
-    "shaft_d": 0.004
-   },
-   "position": [
-    -1.7769,
-    0.127,
-    0.903
+    -1.6,
+    1.7,
+    0.131
    ],
    "wxyz": [
     1.0,
@@ -640,9 +592,9 @@
     "lit": 1
    },
    "position": [
-    -1.6996,
-    0.121,
-    0.903
+    -1.685,
+    1.64,
+    0.135
    ],
    "wxyz": [
     1.0,
@@ -666,9 +618,9 @@
     "lit": 1
    },
    "position": [
-    -1.6004,
-    0.121,
-    0.903
+    -1.6,
+    1.64,
+    0.135
    ],
    "wxyz": [
     1.0,
@@ -692,9 +644,9 @@
     "lit": 1
    },
    "position": [
-    -1.5011,
-    0.121,
-    0.903
+    -1.515,
+    1.64,
+    0.135
    ],
    "wxyz": [
     1.0,
@@ -716,9 +668,9 @@
     "units": 2
    },
    "position": [
-    -1.7989,
-    0.2,
-    0.903
+    -1.685,
+    1.68,
+    0.135
    ],
    "wxyz": [
     1.0,
@@ -740,9 +692,9 @@
     "units": 3
    },
    "position": [
-    -1.6996,
-    0.2,
-    0.903
+    -1.6,
+    1.68,
+    0.135
    ],
    "wxyz": [
     1.0,
@@ -764,9 +716,9 @@
     "units": 2
    },
    "position": [
-    -1.6004,
-    0.2,
-    0.903
+    -1.515,
+    1.68,
+    0.135
    ],
    "wxyz": [
     1.0,
@@ -789,9 +741,9 @@
     "on": 1
    },
    "position": [
-    -1.5011,
-    0.2,
-    0.903
+    -1.685,
+    1.72,
+    0.135
    ],
    "wxyz": [
     1.0,
@@ -813,9 +765,9 @@
     "units": 3
    },
    "position": [
-    -1.7989,
-    0.279,
-    0.903
+    -1.6,
+    1.72,
+    0.135
    ],
    "wxyz": [
     1.0,
@@ -837,9 +789,9 @@
     "units": 4
    },
    "position": [
-    -1.6996,
-    0.279,
-    0.903
+    -1.515,
+    1.72,
+    0.135
    ],
    "wxyz": [
     1.0,
@@ -1151,9 +1103,9 @@
     "studs": 1
    },
    "position": [
-    -1.62,
-    0.98,
-    0.9
+    -1.08,
+    1.7,
+    0.135
    ],
    "wxyz": [
     1.0,
@@ -1176,9 +1128,9 @@
     "on": 1
    },
    "position": [
-    -1.6708,
-    0.9546,
-    0.908
+    -1.685,
+    1.76,
+    0.135
    ],
    "wxyz": [
     1.0,
@@ -1202,9 +1154,9 @@
     "lit": 1
    },
    "position": [
-    -1.5692,
-    1.0054,
-    0.908
+    -1.6,
+    1.76,
+    0.135
    ],
    "wxyz": [
     1.0,
@@ -1338,6 +1290,1109 @@
     0.0,
     0.0,
     -0.7071067811865475
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.8079,
+    0.113,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.7899,
+    0.113,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.8079,
+    0.129,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.7899,
+    0.129,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.7086,
+    0.113,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.6906,
+    0.113,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.7086,
+    0.129,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.6906,
+    0.129,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.6094,
+    0.113,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.5914,
+    0.113,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.6094,
+    0.129,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.5914,
+    0.129,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.5101,
+    0.113,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.4921,
+    0.113,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.5101,
+    0.129,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.4921,
+    0.129,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.8079,
+    0.192,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.7899,
+    0.192,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.8079,
+    0.208,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.7899,
+    0.208,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.7086,
+    0.192,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.6906,
+    0.192,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.7086,
+    0.208,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.6906,
+    0.208,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.6094,
+    0.192,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.5914,
+    0.192,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.6094,
+    0.208,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.5914,
+    0.208,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.5101,
+    0.192,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.4921,
+    0.192,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.5101,
+    0.208,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.4921,
+    0.208,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.8079,
+    0.271,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.7899,
+    0.271,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.8079,
+    0.287,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.7899,
+    0.287,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.7086,
+    0.271,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.6906,
+    0.271,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.7086,
+    0.287,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:screw",
+   "params": {
+    "size": 1.0,
+    "length": 0.02,
+    "shaft_d": 0.004
+   },
+   "position": [
+    -1.6906,
+    0.287,
+    0.903
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:pupgo_car",
+   "params": {
+    "size": 1.0,
+    "length": 0.22,
+    "width": 0.11,
+    "wheel_d": 0.06,
+    "roof_on": 0,
+    "wheels": 2
+   },
+   "position": [
+    -1.65,
+    0.7,
+    0.9
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:roof_panel",
+   "params": {
+    "size": 1.0,
+    "width": 0.12,
+    "depth": 0.08
+   },
+   "position": [
+    -1.62,
+    0.92,
+    0.9
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:wheel",
+   "params": {
+    "size": 1.0,
+    "diameter": 0.06,
+    "width": 0.022
+   },
+   "position": [
+    -1.88,
+    0.92,
+    0.9
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "visible": true
+  },
+  {
+   "asset": "proc:wheel",
+   "params": {
+    "size": 1.0,
+    "diameter": 0.06,
+    "width": 0.022
+   },
+   "position": [
+    -1.78,
+    0.92,
+    0.9
+   ],
+   "wxyz": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
    ],
    "scale": [
     1.0,

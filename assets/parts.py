@@ -331,3 +331,95 @@ def build_snap_wire(size=1.0, units=3):
     from partlib import polytube
     ps.add("plastic_red", polytube(pts, 0.0018, sections=8))
     return _finish(ps, size)
+
+
+# ------------------------------------------------------------------- pup go car
+
+CAR_PARAMS = [
+    SIZE,
+    ("length", 0.220, (0.100, 0.600, 0.010)),
+    ("width", 0.110, (0.050, 0.300, 0.005)),
+    ("wheel_d", 0.060, (0.020, 0.150, 0.005)),
+    ("roof_on", 0, (0, 1, 1)),
+    ("wheels", 2, (0, 4, 1)),
+]
+
+
+def _wheel_at(ps, x, y, r, w):
+    """One wheel on an axle stub at (x, +-y), axle along Y."""
+    tyre = trimesh.creation.annulus(r_min=r * 0.62, r_max=r, height=w, sections=32)
+    tyre.apply_transform(trimesh.transformations.rotation_matrix(np.pi / 2, [1, 0, 0]))
+    ps.add("rubber", tyre.apply_translation([x, y, r]))
+    sy = 1.0 if y > 0 else -1.0
+    ps.add("tool_yellow", tube((x, y - sy * w / 2, r), (x, y + sy * w / 2, r),
+                               r * 0.62, sections=28))
+    ps.add("plastic_gray", tube((x, y + sy * (w / 2 + 0.001), r),
+                                (x, y + sy * (w / 2 + 0.003), r), r * 0.22, sections=14))
+
+
+def build_pupgo_car(size=1.0, length=0.220, width=0.110, wheel_d=0.060,
+                    roof_on=0, wheels=2):
+    """The 'Pup Go Car' model at a chosen point in its assembly.
+
+    RoboTTT's episode is roof -> screw -> drill -> wheel, so the two things that
+    change are exposed as parameters: `roof_on` and how many of the four `wheels`
+    are fitted. The default (roof off, rear pair on) is the state the arm picks up
+    from -- the yellow roof and the front wheels sit staged beside it.
+
+    Screw posts stay visible whether or not the roof is on; that is what the
+    driver goes into.
+    """
+    ps = PartSet()
+    r, ww = wheel_d / 2.0, wheel_d * 0.36
+    z0 = r                                        # chassis rides at axle height
+    body_w = width - 2 * ww - 0.004               # body sits inboard of the tyres
+    y_w = body_w / 2.0 + ww / 2.0 + 0.002
+
+    ps.add("plastic_gray", box((length * 0.90, body_w, 0.006), (0, 0, z0 + 0.003)))
+    for sx in (-1, 1):                            # axle beams the wheels hang off
+        x = sx * length * 0.32
+        ps.add("steel", tube((x, -y_w - ww / 2, z0), (x, y_w + ww / 2, z0), 0.0035, sections=12))
+
+    hull_h = 0.030
+    ps.add("plastic_blue", box((length * 0.90, body_w, hull_h), (0, 0, z0 + 0.006 + hull_h / 2))) 
+    ps.add("plastic_blue", box((length * 0.30, body_w * 0.94, 0.014),          # hood
+                               (length * 0.30, 0, z0 + 0.006 + hull_h + 0.007)))
+    for sy in (-1, 1):                            # headlights
+        ps.add("white_plastic", tube((length * 0.448, sy * body_w * 0.28, z0 + 0.030),
+                                     (length * 0.455, sy * body_w * 0.28, z0 + 0.030),
+                                     0.007, sections=14))
+
+    cab_l, cab_h = length * 0.40, 0.034
+    cab_x, cab_z = -length * 0.12, z0 + 0.006 + hull_h
+    ps.add("plastic_red", box((cab_l, body_w * 0.92, 0.004), (cab_x, 0, cab_z + 0.002)))
+    for sx in (-1, 1):                            # cabin pillars, open in between
+        ps.add("plastic_red", box((0.008, body_w * 0.92, cab_h),
+                                  (cab_x + sx * (cab_l / 2 - 0.004), 0, cab_z + cab_h / 2)))
+    for sy in (-1, 1):
+        ps.add("plastic_red", box((cab_l, 0.006, cab_h),
+                                  (cab_x, sy * body_w * 0.46, cab_z + cab_h / 2)))
+
+    posts = [(cab_x + sx * (cab_l / 2 - 0.008), sy * body_w * 0.34)
+             for sx in (-1, 1) for sy in (-1, 1)]
+    for px, py in posts:                          # the four screw posts
+        ps.add("plastic_gray", tube((px, py, cab_z), (px, py, cab_z + cab_h), 0.005, sections=12))
+
+    if roof_on:
+        roof_z = cab_z + cab_h
+        ps.add("tool_yellow", box((cab_l + 0.010, body_w * 0.98, 0.005),
+                                  (cab_x, 0, roof_z + 0.0025)))
+        for px, py in posts:
+            ps.add("steel", tube((px, py, roof_z + 0.005), (px, py, roof_z + 0.008),
+                                 0.0034, sections=10))
+
+    wheels = int(round(wheels))
+    slots = [(-length * 0.32, -y_w), (-length * 0.32, y_w),
+             (length * 0.32, -y_w), (length * 0.32, y_w)]   # rear pair first
+    for x, y in slots[:max(0, min(wheels, 4))]:
+        _wheel_at(ps, x, y, r, ww)
+    if wheels < 4:                                # bare stubs where a wheel is missing
+        for x, y in slots[wheels:]:
+            sy = 1.0 if y > 0 else -1.0
+            ps.add("steel", tube((x, y - sy * ww / 2, r), (x, y + sy * ww * 0.2, r),
+                                 0.004, sections=10))
+    return _finish(ps, size)

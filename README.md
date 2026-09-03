@@ -172,6 +172,15 @@ things follow:
   Add that to the tray's position and a part lands in that cell — which makes the
   tray a table of reset poses rather than scenery.
 
-In `scene_demo.json` the tools hang on the pegboard **above the workbench**, not
-across the room: RoboTTT's robot picks the drill up mid-task, so its hook is a
-home pose and has to be within reach of the bench.
+`pupgo_car` is the assembly target itself, not a loose part. RoboTTT's episode is
+roof -> screw -> drill -> wheel, so the two things that change during it are the
+parameters: `roof_on`, and how many of the four `wheels` are fitted. The default
+(roof off, rear pair on, bare stubs at the front) is the state the arm picks up
+from, with the yellow roof and the front wheels staged beside it.
+
+`scene_demo.json` stages the **Pup Go Car** task on the bench: the car, the roof,
+two front wheels, and a tray of screws, with the drill, drivers and wrenches on the
+pegboard directly above. The tools hang there rather than across the room because
+the robot picks the drill up mid-task — the hook is a home pose, so it has to be in
+reach of the bench. The Circuit kit is stored in a bin on the rack's bottom shelf;
+it is a different task, not scenery for this one.

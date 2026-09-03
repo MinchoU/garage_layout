@@ -36,6 +36,7 @@ REGISTRY = {
     "robot_head": (parts.build_head, parts.HEAD_PARAMS),
     "remote_control": (parts.build_remote, parts.REMOTE_PARAMS),
     "circuit_board": (parts.build_board, parts.BOARD_PARAMS),
+    "pupgo_car": (parts.build_pupgo_car, parts.CAR_PARAMS),
     "snap_lamp": (parts.build_snap_lamp, parts.SNAP_PARAMS),
     "snap_motor": (parts.build_snap_motor, parts.MOTOR_PARAMS),
     "snap_button": (parts.build_snap_button, parts.SNAP_PARAMS),
