@@ -52,8 +52,8 @@ Ports only have to be unique **within one registry**. Claimed on this box:
 | 8214 | `pnp_pen/pen_sweep_viser.py` |
 | 8311 | `viser_pen.py` |
 | 8871 | `rocky_ball/scripts/viser_view.py` |
-| 8877 | `room_builder/editor.py` |
 | 8872 | `sysid_0828/scripts/viser_clouds.py` |
+| 8877 | `room_builder/editor.py` |
 | 8891 | `sysid_0828/scripts/viser_classes.py` |
 
 If the forwarder shows nothing, check that `~/.viser_ports/_read.py` exists on this
