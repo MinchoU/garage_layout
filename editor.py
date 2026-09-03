@@ -23,6 +23,7 @@ import viser.transforms as vtf
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import assets  # noqa: E402
+import viser_register  # noqa: E402
 
 GLB_DIR = HERE / "assets_out"
 
@@ -340,11 +341,17 @@ class Editor:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--port", type=int, default=8080)
+    # Hard-coded and unique: the port is the registry's primary key, and 8080 on
+    # this cluster is already taken -- viser would silently drift to 8081 and the
+    # tunnel would point at nothing.
+    ap.add_argument("--port", type=int, default=8877)
     ap.add_argument("--scene", default=None, help="scene .json to load at startup")
     args = ap.parse_args()
 
-    server = viser.ViserServer(port=args.port)
+    server = viser.ViserServer(host="0.0.0.0", port=args.port)
+    # get_port(), never args.port: viser increments past a busy port without saying so.
+    viser_register.register(server.get_port(), run="garage layout editor", kind="tool",
+                            log_dir=str(HERE))
     ed = Editor(server)
     scene_path = args.scene or (HERE / "scene_demo.json")
     if Path(scene_path).exists():

@@ -29,10 +29,17 @@ Requires `viser`, `trimesh`, `numpy`, `shapely`, `pillow`, and `matplotlib` for 
 ## Running
 
 ```bash
-python editor.py --port 8080              # opens scene_demo.json if it is present
+python editor.py                          # port 8877, opens scene_demo.json if present
 python editor.py --scene my_room.json     # reload a saved layout
 python build_assets.py                    # every asset -> assets_out/*.glb
 ```
+
+On the Yonsei AI cluster the editor registers itself into `~/.viser_ports` on
+startup, so the laptop-side `autoforward.py` opens the tunnel and
+`http://localhost:8877` works with no manual `ssh -L`. The port is the registry's
+primary key, so it is hard-coded rather than defaulted to 8080 — and what gets
+registered is `server.get_port()`, because viser increments past a busy port
+without saying so.
 
 ## Adding an asset
 
