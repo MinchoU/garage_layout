@@ -53,7 +53,8 @@ Ports only have to be unique **within one registry**. Claimed on this box:
 | 8311 | `viser_pen.py` |
 | 8871 | `rocky_ball/scripts/viser_view.py` |
 | 8877 | `room_builder/editor.py` |
-| 8891 | `sysid_0828/scripts/viser_{classes,clouds}.py` — both, one needs renumbering |
+| 8872 | `sysid_0828/scripts/viser_clouds.py` |
+| 8891 | `sysid_0828/scripts/viser_classes.py` |
 
 If the forwarder shows nothing, check that `~/.viser_ports/_read.py` exists on this
 box before anything else. `register()` does not create it, the 90 s pruner lives
