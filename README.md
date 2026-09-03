@@ -179,12 +179,16 @@ from, with the yellow roof and the front wheels staged beside it.
 
 There is one work surface, not two. The plain `table` predated the workbench and
 was doing nothing but holding the YCB objects, so it is gone and the workbench
-took over its pose — free-standing at `(0.55, 1.10)` rather than backed onto the
-`-X` wall, so a bimanual robot can reach it from either side.
+took its place — backed onto the `+Y` wall beside the rack, with the drill,
+drivers and wrenches on the pegboard directly above it (0.35–0.60 m from the
+bench centre). A free-standing bench cannot have a tool wall; that is what pins
+it to `+Y`.
 
-That costs the tool wall: the drill and drivers still hang on the `-X` pegboard,
-now ~2.5 m away, which is storage rather than a home pose. Either give the bench
-its own pegboard backboard or move them to a wall behind it.
+Moving a bench means moving what is on it. `scene_demo.json` was rebuilt by
+applying one rigid transform (`T_new @ inv(T_old)`) to the bench pose and to
+every item resting on it — a translation alone scrambles the layout whenever the
+yaw changes. Select the riders by the bench's **footprint**, not by height alone:
+a `z > 0.88` filter also catches whatever is sitting on the rack's upper shelves.
 
 `scene_demo.json` stages the **Pup Go Car** task on the bench: the car, the roof,
 two front wheels, and a tray of screws, with the drill, drivers and wrenches on the
