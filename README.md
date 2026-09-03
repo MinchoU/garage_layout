@@ -177,6 +177,10 @@ parameters: `roof_on`, and how many of the four `wheels` are fitted. The default
 (roof off, rear pair on, bare stubs at the front) is the state the arm picks up
 from, with the yellow roof and the front wheels staged beside it.
 
+There is one work surface, not two. The plain `table` predated the workbench and
+was doing nothing but holding the YCB objects; those moved to the bench's free
+`-Y` end and the table is gone, which gives the middle of the room back as floor.
+
 `scene_demo.json` stages the **Pup Go Car** task on the bench: the car, the roof,
 two front wheels, and a tray of screws, with the drill, drivers and wrenches on the
 pegboard directly above. The tools hang there rather than across the room because
