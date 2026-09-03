@@ -39,22 +39,21 @@ the registry's primary key, so it is hard-coded rather than defaulted to 8080 â€
 and what gets registered is `server.get_port()`, because viser increments past a
 busy port without saying so.
 
-**Which registry, though.** There are two `node01`s and they do not share `/home`:
-this one (172.20.1.1, 8x L40S, its own Slurm) and the Yonsei AI cluster's
-(10.1.1.16). Each has its own `~/.viser_ports` polled by its own forwarder, so a
-server here does not show up in `ssh ai python3 ~/.viser_ports/_read.py` and vice
-versa. Register on the box you are running on.
+**Which registry, though.** There are two `node01`s that do not share `/home`: this
+one (172.20.1.1, 8x L40S) and the Yonsei AI cluster's (10.1.1.16). They also do
+not share a registry *path*:
 
-Ports only have to be unique **within one registry**. Claimed on this box:
+| box | registry | forwarder |
+|---|---|---|
+| Yonsei AI cluster | `~/.viser_ports` | `autoforward.py` via `ssh ai` |
+| **node01 (this box)** | **`/data3/cmw9903/.viser_ports`** | `autoforward_l40.py`, straight to 165.132.144.104 |
 
-| port | script |
-|---|---|
-| 8214 | `pnp_pen/pen_sweep_viser.py` |
-| 8311 | `viser_pen.py` |
-| 8871 | `rocky_ball/scripts/viser_view.py` |
-| 8872 | `sysid_0828/scripts/viser_clouds.py` |
-| 8877 | `room_builder/editor.py` |
-| 8891 | `sysid_0828/scripts/viser_classes.py` |
+`~/.viser_ports` on this box is read by nothing. The training runs set
+`VISER_REGISTRY_DIR=/data3/cmw9903/.viser_ports`, and `viser_register.py` here
+honours the same variable, falling back to the `/data3` root when it exists.
+
+Ports must be unique **within one registry**. In node01's: 8080 and 8081 are the
+BFM-Zero training runs, 8877 is this editor.
 
 If the forwarder shows nothing, check that `~/.viser_ports/_read.py` exists on this
 box before anything else. `register()` does not create it, the 90 s pruner lives

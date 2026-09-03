@@ -18,7 +18,25 @@ import socket
 import threading
 import time
 
-REG_DIR = os.path.expanduser("~/.viser_ports/active")
+# Which registry root, in priority order:
+#   1. $VISER_REGISTRY_DIR -- what the training runs set (viser_registry.py reads it too)
+#   2. /data3/cmw9903/.viser_ports -- node01's registry, polled by autoforward_l40.py.
+#      node01 does NOT use ~/.viser_ports; only the Yonsei AI cluster's forwarder
+#      reads that one, and it cannot see this box.
+#   3. ~/.viser_ports -- the AI cluster default.
+_ROOTS = [os.environ.get("VISER_REGISTRY_DIR", ""),
+          "/data3/cmw9903/.viser_ports",
+          os.path.expanduser("~/.viser_ports")]
+
+
+def _reg_dir():
+    for root in _ROOTS:
+        if root and os.path.isdir(root):
+            return os.path.join(root, "active")
+    return os.path.expanduser("~/.viser_ports/active")
+
+
+REG_DIR = _reg_dir()
 _HEARTBEAT_S = 30
 
 
