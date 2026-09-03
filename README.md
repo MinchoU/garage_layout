@@ -178,8 +178,13 @@ parameters: `roof_on`, and how many of the four `wheels` are fitted. The default
 from, with the yellow roof and the front wheels staged beside it.
 
 There is one work surface, not two. The plain `table` predated the workbench and
-was doing nothing but holding the YCB objects; those moved to the bench's free
-`-Y` end and the table is gone, which gives the middle of the room back as floor.
+was doing nothing but holding the YCB objects, so it is gone and the workbench
+took over its pose — free-standing at `(0.55, 1.10)` rather than backed onto the
+`-X` wall, so a bimanual robot can reach it from either side.
+
+That costs the tool wall: the drill and drivers still hang on the `-X` pegboard,
+now ~2.5 m away, which is storage rather than a home pose. Either give the bench
+its own pegboard backboard or move them to a wall behind it.
 
 `scene_demo.json` stages the **Pup Go Car** task on the bench: the car, the roof,
 two front wheels, and a tray of screws, with the drill, drivers and wrenches on the
