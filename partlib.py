@@ -28,12 +28,26 @@ MATERIALS: dict[str, tuple[tuple[int, int, int], float, float]] = {
     "white_plastic": ((238, 236, 230), 0.0, 0.55),
     "steel": ((168, 172, 178), 0.85, 0.30),
     "tool_yellow": ((226, 176, 38), 0.0, 0.45),
+    "pcb_green": ((30, 108, 64), 0.05, 0.50),
+    "plastic_red": ((190, 46, 42), 0.0, 0.50),
+    "plastic_green": ((52, 150, 74), 0.0, 0.50),
+    "plastic_gray": ((150, 152, 156), 0.0, 0.60),
+    "copper": ((184, 115, 60), 0.90, 0.32),
+    "rubber": ((40, 40, 44), 0.0, 0.92),
+    "tote_gray": ((96, 102, 110), 0.0, 0.60),
+    "cardboard": ((190, 158, 112), 0.0, 0.90),
+    "led_red": ((220, 40, 36), 0.0, 0.25),
+    "led_green": ((48, 200, 90), 0.0, 0.25),
+    "led_rgb": ((236, 232, 244), 0.0, 0.20),
 }
 
 # Parts that glow. Rendered as emissive so a lit bulb reads as lit rather than
 # as a pale plastic ball -- viser has no light bound to it, this is just shading.
 EMISSIVE: dict[str, tuple[int, int, int]] = {
     "bulb_glass": (255, 206, 128),
+    "led_red": (255, 60, 50),
+    "led_green": (70, 255, 120),
+    "led_rgb": (190, 130, 255),
 }
 
 

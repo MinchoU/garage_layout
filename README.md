@@ -12,8 +12,10 @@ assets/pegboard.py  pegboard wall + ceiling (fixed hole pitch at any size)
 assets/door.py      wall_with_door — wall with an outward-swinging leaf
 assets/walls.py     wall_panel / ceiling_panel (plain wall and ceiling)
 assets/lighting.py  lightbulb / ceiling_light (two-socket backplate)
-assets/furniture.py chair / step_ladder / ladder / rack / wall_cabinet
-assets/tools.py     drill, hanging in a pegboard hook
+assets/furniture.py chair / step_ladder / ladder / rack / wall_cabinet / workbench
+assets/tools.py     drill / screwdriver / wrench, hanging in pegboard hooks
+assets/parts.py     RoboTTT task parts (fasteners, drivetrain, snap circuits)
+assets/bins.py      parts_tray (compartmented) / tote
 assets/ycb.py       real YCB meshes — the only assets that are not procedural
 assets/simple.py    room_shell / table / crate
 assets/__init__.py  REGISTRY: name -> (builder, GUI parameter spec)
@@ -117,3 +119,32 @@ no `ycb_*` entries — no error. Sources that only ship USD need converting to O
 first (with `pxr`); trimesh cannot read USD.
 
 YCB data is **CC BY 4.0** — redistributable with attribution. See [NOTICE.md](NOTICE.md).
+
+## RoboTTT parts
+
+`assets/parts.py` stands in for the objects in
+[RoboTTT](https://arxiv.org/abs/2607.15275): the drivetrain of the *Pup Go Car*
+and *Gear Bot* assemblies (screw, gear, wheel, roof_panel, chassis, robot_head,
+remote_control) and the *Circuit* task's snap modules (circuit_board plus
+snap_led_red / _green / _rgb, snap_lamp, snap_motor, snap_button, snap_switch,
+snap_wire). The paper ships no assets, so none of these are scans — they are built
+to the real hardware's dimensions and styled so each type is distinguishable at a
+glance, nothing more.
+
+Snap modules live on a `U = 25.4 mm` grid and span a whole number of units, and
+`circuit_board` studs the same grid, so a module always lands on studs. Same rule
+as the pegboard: change the board's `cols`/`rows` and the stud count changes, the
+pitch never does.
+
+Parts run 4 to 160 mm, so unlike the room they are only legible up close. Two
+things follow:
+
+- `parts.py` normalises every builder to base-on-z=0, footprint-centred, so
+  `position.z = the surface it stands on` is always right.
+- `bins.compartments(**tray_params)` returns each cell's centre and inside floor.
+  Add that to the tray's position and a part lands in that cell — which makes the
+  tray a table of reset poses rather than scenery.
+
+In `scene_demo.json` the tools hang on the pegboard **above the workbench**, not
+across the room: RoboTTT's robot picks the drill up mid-task, so its hook is a
+home pose and has to be within reach of the bench.

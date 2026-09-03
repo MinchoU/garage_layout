@@ -235,3 +235,56 @@ def build_rack(width=1.000, depth=0.450, height=1.800, n_shelves=4, post=0.045,
         ps.add("metal_black", beam((-hx, -hy, 0.05), (hx, -hy, height - 0.05), 0.020, 0.010,
                                    u_axis=(0, 1, 0)))
     return ps.to_scene()
+
+
+WORKBENCH_PARAMS = [
+    ("width", 1.600, (0.60, 3.00, 0.05)),
+    ("depth", 0.700, (0.35, 1.20, 0.05)),
+    ("height", 0.900, (0.60, 1.20, 0.01)),
+    ("top_t", 0.045, (0.018, 0.100, 0.001)),
+    ("drawers", 3, (0, 6, 1)),
+    ("lower_shelf", 1, (0, 1, 1)),
+]
+
+
+def build_workbench(width=1.600, depth=0.700, height=0.900, top_t=0.045,
+                    drawers=3, lower_shelf=1):
+    """Steel-framed bench with a thick top, a drawer bank, and a lower shelf.
+
+    Floor piece facing +Y: the drawer bank sits on the -X end and the working
+    edge is +Y, so giving it a wall's yaw backs it onto that wall.
+    """
+    ps = PartSet()
+    z_top = height - top_t
+    ps.add("wood", box((width, depth, top_t), (0, 0, z_top + top_t / 2.0)))
+    ps.add("seam", box((width + 0.010, 0.008, top_t * 0.6),
+                       (0, depth / 2.0, z_top + top_t / 2.0)))          # front edge band
+    leg, inset = 0.045, 0.060
+    xs = (-(width / 2 - inset), width / 2 - inset)
+    ys = (-(depth / 2 - inset), depth / 2 - inset)
+    for x in xs:
+        for y in ys:
+            ps.add("metal_black", box((leg, leg, z_top), (x, y, z_top / 2.0)))
+    for y in ys:                                                        # long rails
+        ps.add("metal_black", box((width - 2 * inset, 0.030, 0.040), (0, y, z_top - 0.070)))
+    for x in xs:
+        ps.add("metal_black", box((0.030, depth - 2 * inset, 0.040), (x, 0, z_top - 0.070)))
+    if lower_shelf:
+        ps.add("plywood", box((width - 2 * inset + leg, depth - 2 * inset + leg, 0.018),
+                              (0, 0, 0.160)))
+    drawers = int(round(drawers))
+    if drawers:
+        bank_w = min(0.420, width * 0.35)
+        x0 = -width / 2 + inset - leg / 2
+        cx = x0 + bank_w / 2.0
+        top_of_bank = z_top - 0.010
+        ps.add("plastic_gray", box((bank_w, depth - 2 * inset, top_of_bank - 0.220),
+                                   (cx, 0, (top_of_bank + 0.220) / 2.0)))
+        h = (top_of_bank - 0.230) / drawers
+        for i in range(drawers):
+            zc = 0.230 + h * (i + 0.5)
+            ps.add("plastic_blue", box((bank_w - 0.008, 0.014, h - 0.006),
+                                       (cx, (depth - 2 * inset) / 2.0, zc)))
+            ps.add("steel", box((bank_w * 0.5, 0.020, 0.012),
+                                (cx, (depth - 2 * inset) / 2.0 + 0.014, zc)))
+    return ps.to_scene()
